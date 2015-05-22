@@ -1,0 +1,27 @@
+Practice SQL Commands:
+2a. SHOW DATABASES: Displays all available mysql databases.
+2b. SHOW TABLES FROM NORTHWIND: Displays all Northwind tables.
+2c. SHOW FIELDS FROM SHIPPERS: Shows "Shippers" tables fields and properties.
+2d. DESCRIBE SHIPPERS: Same results as above.
+
+3. SELECT * FROM SHIPPERS;
+SELECT FirstName, LastName FROM EMPLOYEES;
+SELECT CompanyName, Phone FROM CUSTOMERS WHERE Country='Italy';
+SELECT ContactName, Country FROM Customers ORDER BY Country ASC;
+SELECT ContactName, CompanyName, Country FROM Customers WHERE Country LIKE 'po%' OR (Country LIKE 'sw%');
+SELECT COUNT(*) FROM products ;
+SELECT * FROM products LIMIT 10;
+SELECT DISTINCT Country FROM Customers ORDER BY Country ASC;
+SELECT * FROM products p WHERE UnitPrice BETWEEN 10 and 20;
+INSERT INTO Customers (CustomerID, CompanyName, ContactName, ContactTitle, Address, City, Region, PostalCode, Country, Phone, Fax)
+	VALUES ('254','Cardinal Goods','Andrew Goods','Senior VP','132 Washington Square South','New York','NE','10003','USA', '7325487452', '7325421455');
+UPDATE Products
+	SET UnitPrice=UnitPrice + 5.25
+	WHERE ProductID=20;
+SELECT * FROM products p WHERE UnitsInStock < 10;
+
+step 1: SELECT * FROM orders ORDER BY OrderDate ASC;
+step 2: DELETE FROM Orders
+		WHERE OrderID=10248;
+		
+SELECT NOW();
